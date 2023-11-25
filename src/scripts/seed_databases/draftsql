@@ -1,0 +1,29 @@
+table synchronized_fooddish_users
+	id
+	user_ids
+
+table synchronized_users
+	id
+	user_ids array
+
+table users
+	id
+	telegram_id
+	webapp_id
+	sync_id
+	sync_fd_id
+
+
+
+
+
+// tg bot seed
+table telegram_users
+	id
+
+
+
+
+// webapp seed
+table webapp_users
+	id
