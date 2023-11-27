@@ -42,10 +42,21 @@ This is the over-complicated, production-ready app that can do a little.
 # app main structure
 
 - internal api service ( InApiS ) that is a core of calorie calculator.
-- almost cli telegram bot as client-service for InApiS
-- web-clients with its own server as client-service for InApiS
+    - almost all app features responsibility
+    - client-service access for work via GraphQL, REST, gRPC, websocket
+        - auth
+- almost cli telegram bot as client-service for work with InApiS
+    - help feature
+    - multilang responsibility
+- web-clients with its own server as client-service for work with InApiS
+    - help feature
+    - multilang responsibility
 
-the deploy structure can be made as couples of InApiS and tgbot, InApiS and web-client( Vue or React, or Flutter, or all in one ) OR as all services in one.
+# deploy structure
+
+this can be made as couples of InApiS and tgbot, InApiS and web-client( Vue or React, or Flutter, or all in one )
+OR as all services in one
+OR as single service parts on different machines
 
 # used tech stack
 
@@ -64,6 +75,8 @@ the deploy structure can be made as couples of InApiS and tgbot, InApiS and web-
     - telegraf
     - Vue
     - React
+
+    - Elm
     - Flutter
 
 - application test part
@@ -75,6 +88,7 @@ the deploy structure can be made as couples of InApiS and tgbot, InApiS and web-
     - MeiliSearch
 
 - deploy part
+    - nginx
     - docker
     - bash-scripting
 
