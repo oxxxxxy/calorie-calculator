@@ -1,7 +1,7 @@
 {
-  "name": "calorie-calculator-api-service",
+  "name": "calorie-calculator-internal-api-service",
   "version": "1.0.0",
-  "description": "Main calorie calculator service. Other calcal apps( tgbot, webapp ) works as clients.",
+  "description": "Main calorie calculator service. Other apps( tgbot, webapps ) works as clients.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

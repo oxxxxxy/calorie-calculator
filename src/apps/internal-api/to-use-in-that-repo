@@ -1,0 +1,23 @@
+best nodejs practices
+
+ddd
+
+
+event-driven pattern, bus-hyuyaz, cqrs, etc
+for communicate with other internal services
+grpc
+rest
+graphql, apollo
+understand how to add websocket for that purpose
+
+
+
+nestjs
+typescript
+
+
+
+MEILISEARCH
+postgresql
+
+
