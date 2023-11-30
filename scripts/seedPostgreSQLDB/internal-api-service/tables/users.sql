@@ -3,23 +3,17 @@ CREATE TABLE IF NOT EXISTS users (
 	
 	creation_date TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
 
-	count_of_created_fi BIGINT DEFAULT 0,
-	available_count_of_created_fi BIGINT DEFAULT 0,
+	shared_fdi_by_uids BIGINT[],
+	synced_uids BIGINT[],
 
-	count_of_created_di BIGINT DEFAULT 0,
-	available_count_of_created_di BIGINT DEFAULT 0,
+	set_day_pfcc_limit_id BIGINT,
+	set_day_pfcc_limit_chain_id BIGINT,
 
-
-	shared_fdi_by_uids: BIGINT[],
-	synced_uids: BIGINT[],
-
-	setted_day_pfcc_limit_id BIGINT,
-	setted_day_limit_chain_id BIGINT,
-
+-- external client service id via which user communicate
+	via_client_service_id BIGINT,
 
 -- settings
-	utc VARCHAR(6),
-	language VARCHAR(8)
+	s_utc VARCHAR(6),
 
 
 );
