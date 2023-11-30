@@ -18,19 +18,17 @@ This is the over-complicated, production-ready app that can do a little.
 - add PUfooddishes to day bjuk/pfcc limit from FTS result query
 - show eaten PUfooddishes today or in some special day by date
 - remove eaten today PUfooddishes or from any other day
-
-- show list of some day bjuk/pfcc limits and its results
+    - show list of some day bjuk/pfcc limits and its results
 
 - CRUD schelude chain of day bjuk/pfcc limits and set one of it
-
-- show list of some schelude chains and its results
+    - show list of some schelude chains and its results
 
 - sharing Ufooddishes with other users
 	- via some message thing for tgbot
 	- via link for webapp
 
 - sync user accounts from other clients( tgbot, webapp ) of the same person
-- sync Ufooddishes of one user with another user
+- sync Ufooddishes of one user with another user for FTS adding to eaten
     - via some confirming message thing for tg
     - via confirming link for webapp
 
@@ -38,6 +36,9 @@ This is the over-complicated, production-ready app that can do a little.
 	- set time
 	- set language
 
+- set notifications
+    - notify to eat via some time ( timer ) after last passed eaten fooddish
+    - notify to eat at every some time( schelude )
 
 # app main structure
 
@@ -76,12 +77,13 @@ OR as single service parts on different machines
     - Vue
     - React
 
-    - Elm
-    - Flutter
-
 - application test part
     - Jest
     - tap
+
+- application log part
+    - pino
+
 
 - db part
     - PostgreSQL
@@ -98,7 +100,7 @@ OR as single service parts on different machines
 - Domain-Driven Design
 - Object-Oriented Programming
 - Functional Programming
-- CQRS via Nest.js
+- CQRS
 - [Nest.js code samples](https://github.com/nestjs/nest/)
 - [goldbergyoni's nodebestpractices](https://github.com/goldbergyoni/nodebestpractices)
 - [goldbergyoni's javascript-testing-best-practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
@@ -106,5 +108,6 @@ OR as single service parts on different machines
 - [Sairyss's system-design-patterns](https://github.com/Sairyss/system-design-patterns)
 - [Sairyss's domain-driven-hexagon](https://github.com/Sairyss/domain-driven-hexagon)
 - [bitloops's ddd-hexagonal-cqrs-es-eda](https://github.com/bitloops/ddd-hexagonal-cqrs-es-eda)
+- [bitloops learning](https://bitloops.com/docs/bitloops-language/category/learning)
 
 

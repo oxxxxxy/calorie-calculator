@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS day_pfcc_limits (
+	id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	uid BIGINT,
+
+	creation_date TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+
+	title VARCHAR(128),
+	
+	caloric_content DECIMAL,
+	fat DECIMAL,
+	protein DECIMAL,
+	carbohydrate DECIMAL,
+
+	deleted BOOLEAN DEFAULT FALSE
+);

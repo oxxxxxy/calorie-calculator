@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS day_pfcc_limit_chains (
+	id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	uid BIGINT,
+
+	creation_date TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+
+	title VARCHAR(128),
+
+	day_limit_ids BIGINT[],
+
+	deleted BOOLEAN DEFAULT FALSE
+);
