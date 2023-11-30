@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS fooddish_items (
 	protein DECIMAL,
 	carbohydrate DECIMAL,
 	
-	deleted BOOLEAN DEFAULT FALSE,
+	is_deleted BOOLEAN DEFAULT FALSE,
 
 -- dish props
 	is_dish BOOLEAN NOT NULL,

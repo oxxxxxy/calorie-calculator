@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS day_pfcc_limit_chains (
 
 	day_limit_ids BIGINT[],
 
-	deleted BOOLEAN DEFAULT FALSE
+	is_deleted BOOLEAN DEFAULT FALSE
 );

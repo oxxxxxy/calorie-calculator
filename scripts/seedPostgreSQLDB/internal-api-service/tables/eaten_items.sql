@@ -15,5 +15,5 @@ CREATE TABLE IF NOT EXISTS eaten_items (
 	protein DECIMAL,
 	carbohydrate DECIMAL,
 
-	deleted BOOLEAN DEFAULT FALSE
+	is_deleted BOOLEAN DEFAULT FALSE
 );

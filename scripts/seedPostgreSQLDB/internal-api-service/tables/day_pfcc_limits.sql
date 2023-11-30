@@ -11,5 +11,5 @@ CREATE TABLE IF NOT EXISTS day_pfcc_limits (
 	protein DECIMAL,
 	carbohydrate DECIMAL,
 
-	deleted BOOLEAN DEFAULT FALSE
+	is_deleted BOOLEAN DEFAULT FALSE
 );
