@@ -9,11 +9,16 @@ CREATE TABLE IF NOT EXISTS users (
 	set_day_pfcc_limit_id BIGINT,
 	set_day_pfcc_limit_chain_id BIGINT,
 
--- external client service id via which user communicate
-	via_client_service_id BIGINT,
+
+-- external client service type_id via which user communicate
+--		lol but i don't know how to do that whole thing with external services right now
+	via_client_service_type_id BIGINT,
+
 
 -- settings
 	s_utc VARCHAR(6),
 
+
+	is_active BOOLEAN NOT NULL
 
 );

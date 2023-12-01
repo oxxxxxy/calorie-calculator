@@ -2,7 +2,7 @@ project is in progress... loading...
 
 # Calorie Calculator
 
-This is the over-complicated, production-ready app that can do a little.
+This is the over-complicated, production-ready( i hope ) app that can do a little.
 
 # app main features
 

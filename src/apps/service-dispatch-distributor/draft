@@ -1,0 +1,6 @@
+this thig should be abstrast layer for communicating of one of many internal-api-services with one of many external-client-services
+
+i mean... external-client-services or internal-api-service can be hosted anywhere and can have a lot of instances of the same service type
+
+и так, допустим, мы имеем связку вебклиента( с сервером ) с сервером внутреннего апи( основной функционал приложения ) на одном конце где-то. нам надо сделать синхронизацию одного юзера с другим, который на другом конце с другой связкой, например, тгбот и сервер апи.
+И ЭТА ЗАДАЧА РАСПРЕДЕЛЕНИЯ ПАДАЕТ НА ЭТОТ СЕРВИС

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+
+		"lib": ["es2023"],
+		"module": "node16",
+    "target": "es2022",
+
+    "outDir": "../../../dist/internal-api",
+    "baseUrl": "./",
+
+    "paths": {
+      "@src/*": ["src/*"],
+      "@modules/*": ["src/modules/*"],
+      "@config/*": ["configs/*"],
+      "@libs/*": ["../../libs/*"],
+      "@test/*": ["test/*"]
+    },
+  
+		"exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+  }
+}

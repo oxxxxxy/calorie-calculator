@@ -13,10 +13,11 @@ export interface User {
 	set_day_pfcc_limit_id: number;
 	set_day_pfcc_limit_chain_id?: number;
 
-	via_client_service_id: number;
+	via_client_service_type_id: number;
 
 	s_utc?: Settings_utc;
 
+	is_active: boolean;
 }
 
 
