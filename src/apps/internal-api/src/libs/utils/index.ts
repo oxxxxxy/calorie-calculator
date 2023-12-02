@@ -49,5 +49,5 @@ u.isEmpty = _.isEmpty;
 u.pipe = pipe;
 u.memoize = memoize;
 u.memoizeArgs = memoizeArgs;
-
+u.isEqual = _.isEqual;
 
