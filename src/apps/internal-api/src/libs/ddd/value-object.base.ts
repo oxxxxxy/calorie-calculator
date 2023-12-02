@@ -14,7 +14,6 @@ export abstract class ValueObject<T> {
 	static isValueObject = isValueObject;
 
   constructor(value: T) {
-  	// guarding
     Guard.ifEmpty(value);
 
     this.validate(value);
