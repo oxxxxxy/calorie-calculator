@@ -1,4 +1,5 @@
 import Guard from './guard';
+import u from '../utils';
 
 
 export const isValueObject =
@@ -26,10 +27,7 @@ export abstract class ValueObject<T> {
 	};
  
   public isEqualTo(vo: ValueObject<T>): boolean {
-		// I think there is no point in complicating the comparison.
-		// We compare only data values( primitives, arrays, objects ),but no functions or buffers or etc.
-		// So such an implementation as below is enough.
-    return JSON.stringify(this) === JSON.stringify(vo);
+  	return u.isEqual(this.getValue(), vo.getValue());
   }
 
 }

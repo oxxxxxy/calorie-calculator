@@ -3,6 +3,7 @@
 
 import _ from 'lodash';
 import memoize from 'fast-memoize';
+import equal from 'fast-deep-equal';
 
 
 //wrap funcs to execucte them from left to right
@@ -49,5 +50,5 @@ u.isEmpty = _.isEmpty;
 u.pipe = pipe;
 u.memoize = memoize;
 u.memoizeArgs = memoizeArgs;
-u.isEqual = _.isEqual;
+u.isEqual = equal;
 
