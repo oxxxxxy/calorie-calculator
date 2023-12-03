@@ -64,14 +64,10 @@ export const pipe = (...args: [Function, Function, ...Function[]]): Function => 
 );
 u.pipe = pipe;
 
-//memoize args and get them after by call
-export const memoizeArgs = (...args: [any, ...any]): Function => {
-
-	const memoizedArgs = memoize(a => a);
-	
-	return memoizedArgs.bind(null, args);
+// makes args immutable by caching them and returning a copy
+export const cacheArgs = (...args: [any, ...any[]]): Function => {
+	return () => structuredClone(args);
 };
-u.memoizeArgs = memoizeArgs;
-
+u.cacheArgs = cacheArgs; 
 
 
