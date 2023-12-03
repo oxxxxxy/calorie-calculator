@@ -20,8 +20,14 @@ u.isEmpty = isEmpty;
 
 u.memoize = memoize;
 
-const isEqual =
-	(...args: [any, any, ...any]): boolean => args.every(
+
+
+/**
+ * @description check deep equality of two or more data types
+ * @type {(...args: [any, any, ...any]): boolean => args.every(}
+ * @returns {boolean} true/false
+ */
+const isEqual = (...args: [any, any, ...any]): boolean => args.every(
 		(e, i, a) => {
 			if(i === a.length - 1){
 				return true;
@@ -31,10 +37,15 @@ const isEqual =
 	);
 u.isEqual = isEqual;
 
+
 //wrap funcs to execucte them from left to right
 const pipeTwo = (f: Function, s: Function): Function => (...args: any) => s(f(...args)); 
 
-//make sequence of funcs to execute them from left to right
+/**
+ * @description make sequence of funcs to execute them from left to right
+ * @type {(...args: [Function, Function, ...Function[]]): Function => (}
+ * @returns piped fn with funcs from left to right.
+ */
 const pipe = (...args: [Function, Function, ...Function[]]): Function => (
 	args.reduce(
 		(acc: Function, e: Function, i: number, a: Function[]): Function => {
