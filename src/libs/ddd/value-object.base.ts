@@ -1,5 +1,5 @@
 import Guard from './guard';
-import u, {memoize} from '../utils';
+import u from '../utils';
  
 
 export const isValueObject =
@@ -7,7 +7,7 @@ export const isValueObject =
 
 
 export abstract class ValueObject<T> {
-  protected readonly value: T;
+  public readonly getValue: () => T;
  	
  	protected abstract validate(value: T): void;
 
@@ -18,12 +18,8 @@ export abstract class ValueObject<T> {
 
     this.validate(value);
 
-    this.value = value;
+    this.getValue = u.pipe(u.memoizeArgs(value), structuredClone);
   }
-
-	public getValue(): T {
-		return structuredClone(this.value);
-	};
  
   public isEqualTo(vo: ValueObject<T>): boolean {
   	return u.isEqual(this.getValue(), vo.getValue());

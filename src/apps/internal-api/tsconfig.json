@@ -32,7 +32,7 @@
       "@ia-libs/*": ["src/libs/*"],
       "@ia-test/*": ["test/*"],
 
-      "@libs/*":["../../libs/"]
+      "@libs/*":["../../libs/*"]
     },
   
 		"exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
