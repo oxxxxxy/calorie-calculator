@@ -1,5 +1,5 @@
 // this lib is a try to abstract dependencies for any utilits, lol
-// i mean, if some dependency become <i>bad</i>, only that place will be refactored.
+// i mean, if some dependency become <i>bad</i>, only that place will be refactored/rewriten/recoded/etc...
 
 import _ from 'lodash';
 import memoize from 'fast-memoize';
@@ -10,14 +10,14 @@ import equal from 'fast-deep-equal';
 type ObjectAnyPropPlainDeclaration = Record<string, any>;
 
 
-const u: ObjectAnyPropPlainDeclaration = {};
+export const u: ObjectAnyPropPlainDeclaration = {};
 export default u;
 
 
-
-const isEmpty = (arg: any): boolean => _.isEmpty(arg);
+export const isEmpty = (arg: any): boolean => _.isEmpty(arg);
 u.isEmpty = isEmpty;
 
+exports.memoize = memoize;
 u.memoize = memoize;
 
 
@@ -27,7 +27,7 @@ u.memoize = memoize;
  * @type {(...args: [any, any, ...any]): boolean => args.every(}
  * @returns {boolean} true/false
  */
-const isEqual = (...args: [any, any, ...any]): boolean => args.every(
+export const isEqual = (...args: [any, any, ...any]): boolean => args.every(
 		(e, i, a) => {
 			if(i === a.length - 1){
 				return true;
@@ -39,14 +39,14 @@ u.isEqual = isEqual;
 
 
 //wrap funcs to execucte them from left to right
-const pipeTwo = (f: Function, s: Function): Function => (...args: any) => s(f(...args)); 
+export const pipeTwo = (f: Function, s: Function): Function => (...args: any) => s(f(...args)); 
 
 /**
  * @description make sequence of funcs to execute them from left to right
  * @type {(...args: [Function, Function, ...Function[]]): Function => (}
  * @returns piped fn with funcs from left to right.
  */
-const pipe = (...args: [Function, Function, ...Function[]]): Function => (
+export const pipe = (...args: [Function, Function, ...Function[]]): Function => (
 	args.reduce(
 		(acc: Function, e: Function, i: number, a: Function[]): Function => {
 				if(i){
@@ -65,7 +65,7 @@ const pipe = (...args: [Function, Function, ...Function[]]): Function => (
 u.pipe = pipe;
 
 //memoize args and get them after by call
-const memoizeArgs = (...args: [any, ...any]): Function => {
+export const memoizeArgs = (...args: [any, ...any]): Function => {
 
 	const memoizedArgs = memoize(a => a);
 	

@@ -1,6 +1,6 @@
 import Guard from './guard';
-import u from '../utils';
-
+import u, {memoize} from '../utils';
+ 
 
 export const isValueObject =
 	(obj: unknown): obj is ValueObject<unknown> => obj instanceof ValueObject;
@@ -31,3 +31,4 @@ export abstract class ValueObject<T> {
 
 }
 
+export default ValueObject;
